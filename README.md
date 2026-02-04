@@ -3,7 +3,7 @@
 A high-performance, real-time sticky notes board built with React and TypeScript.
 ## Development Setup
 In your teminal
-1. Run `git clone`.
+1. Run `git clone https://github.com/shufeigong/shufeiTempoApp.git`.
 2. Run `cd [your/path/to]shufei-tempo-app`.
 3. Run `npm install`.
 4. Run `npm run dev`.
