@@ -20,7 +20,7 @@ interface NoteComponentProps {
 
 const arePropsEqual = (
   prevProps: NoteComponentProps,
-  nextProps: NoteComponentProps,
+  nextProps: NoteComponentProps
 ): boolean => {
   return (
     prevProps.note === nextProps.note &&
@@ -37,7 +37,6 @@ export const NoteComponent: FC<NoteComponentProps> = memo(
     onDelete,
     onFocus,
     trashRef,
-    isTrashActive,
     setTrashActive,
   }: NoteComponentProps): ReactElement => {
     const noteRef = useRef<HTMLDivElement>(null);
@@ -59,7 +58,7 @@ export const NoteComponent: FC<NoteComponentProps> = memo(
         if (noteRef.current && trashRef.current) {
           const isDivOverlap = checkDivOverlap(
             noteRef.current.getBoundingClientRect(),
-            trashRef.current.getBoundingClientRect(),
+            trashRef.current.getBoundingClientRect()
           );
           setTrashActive(isDivOverlap);
         }
@@ -69,7 +68,7 @@ export const NoteComponent: FC<NoteComponentProps> = memo(
         if (noteRef.current && trashRef.current) {
           const isDivOverlap = checkDivOverlap(
             noteRef.current.getBoundingClientRect(),
-            trashRef.current.getBoundingClientRect(),
+            trashRef.current.getBoundingClientRect()
           );
 
           if (isDivOverlap) {
@@ -139,5 +138,5 @@ export const NoteComponent: FC<NoteComponentProps> = memo(
       </div>
     );
   },
-  arePropsEqual,
+  arePropsEqual
 );
